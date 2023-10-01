@@ -12,7 +12,26 @@ public class PrimeNumber {
 		 * Use any databases[MySql] to store data and retrieve data.
 		 *
 		 */
+		int n = 1000000;
+		boolean[] isPrime = new boolean[n + 1];
+		for (int i = 2; i <= n; i++) {
+			isPrime[i] = true;
+		}
 
+		for (int p = 2; p * p <= n; p++) {
+			if (isPrime[p]) {
+				for (int i = p * p; i <= n; i += p) {
+					isPrime[i] = false;
+				}
+			}
+		}
+
+		// Print prime numbers
+		for (int i = 2; i <= n; i++) {
+			if (isPrime[i]) {
+				System.out.print(i + " ");
+			}
+		}
 	}
 
 }

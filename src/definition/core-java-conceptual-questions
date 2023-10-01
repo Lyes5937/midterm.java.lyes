@@ -252,7 +252,9 @@ Difference between jUnit and testNG?
  TestNG is a Java-based framework, while JUnit is an open-source Unit Testing Framework for JAVA.
 
 What are the dependencies for this project?
- downloaded from online "GitHub" repositories
+ Database Drivers: MySQL .
+ Unit testing : Junit, hamcrest .
+
 
 what is dependency injection in java?
   Dependency Injection (DI) in Java is a design pattern that allows you to provide the dependencies (objects)

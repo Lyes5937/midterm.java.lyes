@@ -8,8 +8,16 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+		int number = 100;
+		int decrement = 1;
 
+		while (number >= 1) {
+			System.out.print(number + ", ");
+			number -= decrement;
+			if (number == 90 || number == 70 || number == 40 || number == 20 ) {
+				decrement++;
+			}
+		}
 
 	}
 }

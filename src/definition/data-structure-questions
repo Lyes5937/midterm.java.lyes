@@ -1,34 +1,125 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
-
+A. Data Structures are necessary for designing efficient algorithms.
 
 What are the various operations that can be performed on different Data Structures?
+ Searching – We can easily search for any data element in a data structure.
+ Sorting – We can sort the elements either in ascending or descending order.
+ Insertion – We can insert new data elements in the data structure.
+ Deletion – We can delete the data elements from the data structure.
+
 List out the areas in which data structures are applied extensively?
+ Compiler design
+ Database management system
+ Statistical analysis package
+ Numerical analysis
+ Artificial intelligence
+ Simulation
+
 what is an Array?
+An array is a data structure consisting of a collection of elements (values or variables), each identified by at
+least one array index or key.
+
 what is the difference between the Array and ArrayList?
+ An array is a fixed-size data structure, while an ArrayList is a dynamically-sized data structure.
+
 what is LinkedList?
+  A dynamic data structure whose size increases as you add the elements and decreases as you remove the
+ elements from the list
+
 How is an Array different from Linked List?
+  An array stores elements in a contiguous memory location. Linked lists store elements randomly at any
+  address in the memory.
+
 what is queue?
+ A Queue is defined as a linear data structure that is open at both ends and the operations are performed in
+ First In First Out (FIFO) order.
+
 what is stack?
+Stack is a linear data structure that follows a particular order in which the operations are performed.
+The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+
 what is FIFO and LIFO?
+LIFO(Last In First Out) or FIFO(First In First Out).
+FIFO is a principle where the first element added to a data structure is the first one to be removed.
+LIFO is a principle where the last element added to a data structure is the first one to be removed.
+
 what is the order of complexity?
+  measures how the runtime of an algorithm scales with the size of the input. It provides an estimate of the
+  resources required by an algorithm, such as time and memory, as the input grows larger.
+
 what is the best case to search an element from an array?
+  when the target value is equal to the first element of the list.
+
 what is the worst case to search an element from an array?
+when the search item appears at the end of the list or not at all.
+
 what is tree in data structure?
+  A tree in data structure is a hierarchical structure composed of nodes linked by edges. It is used for
+ organizing and representing hierarchical relationships and is crucial in various computing applications.
+
 what is graph in data structure?
+A Graph is a non-linear data structure consisting of vertices and edges.
+
 what is the difference between the HashTable and HashMap?
+  A HashTable is synchronized, meaning that only one thread can access it at a time. A HashMap is non-synchronized,
+ meaning that multiple threads can access it simultaneously.
+  HashMap allows one null key and multiple null values whereas Hashtable doesn't allow any null key or value.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+- RDBMS: Relational Database Management System uses arrays.
+- Network data model: Uses graphs to represent relationships between entities.
+- Hierarchical data model: Uses trees to organize data into a tree-like structure. The data is stored as records
+that are connected to each other through links. Each record is a collection of fields, with each field containing
+only one value.
+
 How HashMap works in java?
+  HashMap works on hashing algorithm and uses hashCode() and equals() method on key for get and put operations.
+ HashMap use singly linked list to store elements, these are called bins or buckets.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+  An ArrayIndexOutOfBoundsException in Java is a runtime exception that occurs when an array is accessed
+ with an illegal index. The index is either negative or greater than or equal to the size of the array.
+
 What are the different ways of copying an array into another array?
+- You can use a for loop and copy elements of one to another one by one.
+- Use the clone method to clone an array.
+- Use arraycopy() method of System class.
+- Use copyOf() or copyOfRange() methods of Arrays class.
+
 What is difference between an array and a linked list?
+  An array is a collection of elements of a similar data type. Linked List is an ordered collection of
+ elements of the same type in which each element is connected to the next using pointers.
+
 What is DFS and BFS?
+ BFS(Breadth First Search) uses Queue data structure for finding the shortest path.
+ DFS(Depth First Search) uses Stack data structure.
+
 What is Recursion?
+  Recursion is a technique used to solve computer problems by creating a function that calls itself until
+ your program achieves the desired result.
+
 What are linear and non linear data Structures?
+  In a linear data structure, data elements are arranged in a linear order where each and every element is attached
+ to its previous and next adjacent. In a non-linear data structure, data elements are attached in
+ hierarchically manner.
+
 What is Big-(O)-annotation?
+Is a tool used to describe the time complexity of algorithms. It calculates the time taken to run an algorithm as
+the input grows. In other words, it calculates the worst-case time complexity of an algorithm.
+
 Outlined different kind of sorting algorithm with time complexity?
+- Bubble sort:
+ Time complexity O(n^2) in the worst case, O(n) in the best case.
+- Selection sort:
+ Time complexity O(n^2) in the worst case, O(n^2) in the best case.
+- Insertion sort
+ Time complexity: O(n^2) in the worst case, O(n) in the best case.
+- Merge sort
+ Time complexity: O(n log n) in the worst case, O(n log n) in the best case.
+- Quick sort
+ Time complexity: O(n log n) in the worst case, O(n log n) in the best case.
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
@@ -36,4 +127,15 @@ Draw a table with time complexity in which it will summarize all the data struct
   c)In terms of Searching element.
   d)In terms of Removing element.
 
++-------------------+-----------------------+-----------------------+-----------------------+-----------------------+
+| Data Structure    | Accessing Element     | Inserting Element     | Searching Element     | Removing Element      |
++-------------------+-----------------------+-----------------------+-----------------------+-----------------------+
+| Array             | O(1)                  | O(n) (at worst)       | O(n)                  | O(n) (at worst)       |
+| Linked List       | O(n) (at worst)       | O(1)                  | O(n) (at worst)       | O(n) (at worst)       |
+| Hash Table        | O(1) (average case)   | O(1) (average case)   | O(1) (average case)   | O(1) (average case)   |
+| Binary Search Tree| O(log n)              | O(log n)              | O(log n)              | O(log n)              |
+| AVL Tree          | O(log n)              | O(log n)              | O(log n)              | O(log n)              |
+| Heap              | O(1) (min/max)        | O(log n)              | O(n) (linear search)  | O(log n)              |
+| Trie              | O(m) (m is key length)| O(m) (m is key length)| O(m) (m is key length)| O(m) (m is key length)|
++-------------------+-----------------------+------------------------+----------------------+-----------------------+
 

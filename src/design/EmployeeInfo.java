@@ -16,6 +16,9 @@ public class EmployeeInfo {
  * Use Exception Handling.
  *
  */
+ private int employeeId;
+	private String name;
+	private int salary;
 
 	/*
 	 * declare few static and final fields and some non-static fields
@@ -33,10 +36,11 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId = employeeId;
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.name = name;
+		this.employeeId = employeeId;
 	}
 	
 	/*

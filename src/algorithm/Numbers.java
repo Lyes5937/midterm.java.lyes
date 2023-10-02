@@ -39,16 +39,31 @@ public class Numbers {
 
 		//By following above, Continue for rest of the Sorting Algorithm....
 
+		// Bubble Sort
+		randomize(num, n);
+		algo.bubbleSort(num);
+		long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort: " + bubbleSortExecutionTime + " milli sec");
 
+		// Quick Sort
+		randomize(num, n);
+		long startTime = System.currentTimeMillis();
+		algo.quickSort(num);
+		long quickSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort: " + quickSortExecutionTime + " milli sec");
 
-
-
-
-
-
-
+		// Compare the execution times to determine the best sorting algorithm
+		if (selectionSortExecutionTime < insertionSortExecutionTime && selectionSortExecutionTime < bubbleSortExecutionTime && selectionSortExecutionTime < quickSortExecutionTime) {
+			System.out.println("Selection Sort is the fastest.");
+		} else if (insertionSortExecutionTime < selectionSortExecutionTime && insertionSortExecutionTime < bubbleSortExecutionTime && insertionSortExecutionTime < quickSortExecutionTime) {
+			System.out.println("Insertion Sort is the fastest.");
+		} else if (bubbleSortExecutionTime < selectionSortExecutionTime && bubbleSortExecutionTime < insertionSortExecutionTime && bubbleSortExecutionTime < quickSortExecutionTime) {
+			System.out.println("Bubble Sort is the fastest.");
+		} else {
+			System.out.println("Quick Sort is the fastest.");
+		}
 		//Come to conclusion about which Sorting Algo is better in given data set.
-
+		// Result is: Quick Sort is the fastest (test tried with num = 10000).
 	}
 
 	public static void storeRandomNumbers(int [] num){

@@ -29,9 +29,11 @@ public class Numbers {
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
         connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
         List<String> numbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
-        printValue(numbers);
+
+		printValue(numbers);
 		int n = num.length;
 		randomize (num, n);
+
 		//Insertion Sort
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
